@@ -14,7 +14,7 @@ ENV DEFAULT_LANGUAGE=fr_FR.UTF-8
 ENV PDF_STORAGE_ENCRYPTION=false
 
 RUN apk -U upgrade \
-    && apk add musl-locales gettext librsvg imagemagick potrace ghostscript gpg openjdk8 \
+    && apk add musl-locales gettext-dev librsvg imagemagick potrace ghostscript gpg openjdk8 \
     && docker-php-ext-install gettext \
     && rm -rf /var/cache/apk/*
 
